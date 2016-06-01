@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#canvas{
+			box-shadow: 3px 3px 10px black;
+		}
+	</style>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
+		var context = canvas.getContext("2d");
+		context.lineWidth = 2;
+		context.strokeStyle= "red"
+//		圆角
+		context.lineCap = "round";
+		context.moveTo(0,0);
+	
+//		quadraticCurveTo(dx dy x y )需要四个参数
+//    (dx  dy)控制点
+//、  （x  y)目标点
+		context.quadraticCurveTo(100,0,150,150);
+		context.quadraticCurveTo(150,300,300,300);
+			context.stroke();
+	</script>
+	</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#canvas {
+				/*background-color: lightgoldenrodyellow;*/
+				box-shadow: 3px 3px 10px black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="canvas" width="500" height="500">
+			<!--你的浏览器不支持canvas-->
+		</canvas>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		//		1.拿到画布
+		var canvas = document.getElementById("canvas");
+		var context = canvas.getContext("2d");
+		//		2.准好要走的路线(路径)
+		context.beginPath();
+		//	设置要绘制的路线
+		context.moveTo(100, 100);
+		context.lineTo(100, 300);
+//		context.lineTo(300, 300);
+//		context.closePath();
+//		//		3.给路径做修饰(填充)
+		context.strokeStyle = "red";
+//		context.fillStyle = "yellow";
+		context.stroke();
+//		context.fill();
+//		fill 不是路径上的内容
+//		是路径闭合区域里面的内容
+	</script>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#canvas{
+			box-shadow: 3px 3px 10px black;
+		}
+	</style>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
+		var context = canvas.getContext("2d");
+		
+//		花两个圆
+context.fillStyle="red";
+context.beginPath();
+context.arc(200,250,100,0,Math.PI*2,true)
+context.closePath();
+context.fill();
+context.globalCompositeOperation="source-over"
+context.fillStyle="burlywood";
+context.beginPath();
+context.arc(300,250,100,0,Math.PI*2,true)
+context.closePath();
+context.fill()
+		
+	</script>
+</html>
